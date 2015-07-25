@@ -7,11 +7,8 @@ ONBUILD RUN npm install
 ONBUILD ADD . /app
 ONBUILD RUN grunt build
 
-COPY docker-entrypoint.sh /
-ENTRYPOINT ["/docker-entrypoint.sh"]
+#COPY docker-entrypoint.sh /
+#ENTRYPOINT ["/docker-entrypoint.sh"]
 
 # Define working directory.
 WORKDIR /app
-
-# Define default command.
-CMD ["npm", "start"]
